@@ -8,6 +8,8 @@ function startDrag(event) {
 
     const actualCard = event.target.closest('article')
 
+    if (!actualCard) return;
+
     const startX = event.pageX ?? event.touches[0].pageX;
 
     document.addEventListener('mousemove', onMove);
